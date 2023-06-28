@@ -8,15 +8,15 @@ class LinkedListNode {
 }
 
 export class LinkedList {
+
     constructor() {
-        this.head = new LinkedListNode()
+        this.head = undefined
     }
     head: any
-    next: any
 
     // read methods
     first = () => {
-        return this.head.data
+        return this.head?.data
     }
 
     last = () => {
@@ -27,9 +27,25 @@ export class LinkedList {
         return pointer.data
     }
 
+    toArray = () => {
+        let arr: any = []
+        let pointer = this.head
+        if (pointer === undefined) return arr
+        arr.push(pointer.data)
+        while (pointer?.next !== undefined) {
+            pointer = pointer.next
+            arr.push(pointer.data)
+        }
+        return arr
+    }
+
     // insert methods
     push = (data: any) => {
         let pointer = this.head
+        if (pointer === undefined) {
+            this.head = new LinkedListNode(data)
+            return
+        }
         while (pointer.next !== undefined) {
             pointer = pointer.next
         }
@@ -39,7 +55,11 @@ export class LinkedList {
     unshift = (data: any) => {
         let oldHead = this.head
         let newHead = new LinkedListNode(data)
-
+        if (oldHead === undefined) {
+            oldHead = newHead
+            return
+        }
+        
         newHead.next = oldHead
         this.head = newHead.next
     }
@@ -62,7 +82,7 @@ export class LinkedList {
     }
 
     clear = () => {
-        
+
     }
 
 }
