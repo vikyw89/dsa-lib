@@ -21,6 +21,9 @@ export class LinkedList {
 
     last = () => {
         let pointer = this.head
+        if (pointer === undefined) {
+            return undefined
+        }
         while (pointer?.next !== undefined) {
             pointer = pointer.next
         }
@@ -55,29 +58,33 @@ export class LinkedList {
     unshift = (data: any) => {
         let oldHead = this.head
         let newHead = new LinkedListNode(data)
-        if (oldHead === undefined) {
-            oldHead = newHead
-            return
-        }
-        
+        this.head = newHead
         newHead.next = oldHead
-        this.head = newHead.next
     }
 
     // delete methods
     pop = () => {
         let pointer = this.head
-        while (pointer?.next?.next !== undefined) {
-            pointer = pointer.next
+        let data
+        if (pointer === undefined) {
+            return data
         }
-        let data = pointer.next.data
+        if (pointer.next === undefined) {
+            data = pointer.data
+            this.head = undefined
+            return data
+        }
+        while (pointer.next !== undefined) {
+            if (pointer.next.next === undefined) break
+        }
+        data = pointer.next.data
         pointer.next = undefined
         return data
     }
 
     shift = () => {
-        let data = this.head.data
-        this.head = this.head.next
+        let data = this.head?.data
+        this.head = this.head?.next
         return data
     }
 
