@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watch",
     "dev": "(git pull || echo no git) && npm i && tsc --watch & npx typedoc --watch"
   },
   "repository": {
@@ -24,7 +24,9 @@
   },
   "homepage": "https://github.com/vikyw89/dsa-ts#readme",
   "devDependencies": {
+    "@jest/globals": "^29.5.0",
     "@tsconfig/recommended": "^1.0.2",
+    "@types/jest": "^29.5.2",
     "jest": "^29.5.0",
     "ts-jest": "^29.1.0",
     "typedoc": "^0.24.8"
