@@ -1,0 +1,32 @@
+{
+  "name": "dsa-ts",
+  "version": "1.0.0",
+  "description": "data structure for TS",
+  "main": "./dist/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "(git pull || echo no git) && npm i && tsc --watch & npx typedoc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikyw89/dsa-ts.git"
+  },
+  "keywords": [
+    "data",
+    "structure",
+    "typescript"
+  ],
+  "author": "https://github.com/vikyw89",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vikyw89/dsa-ts/issues"
+  },
+  "homepage": "https://github.com/vikyw89/dsa-ts#readme",
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.2",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "typedoc": "^0.24.8"
+  }
+}
