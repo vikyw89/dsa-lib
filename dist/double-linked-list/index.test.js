@@ -75,5 +75,10 @@ describe('testing DoubleLinkedList file', () => {
         newList.clear();
         expect(JSON.stringify(newList.toArray())).toBe(JSON.stringify([]));
     });
+    test('LinkedList.length()', () => {
+        expect(newList.size()).toBe(0);
+        newList.fromArray([1, 2, 3, 4, 3, 1, 1, 1, 4]);
+        expect(newList.size()).toBe(9);
+    });
 });
 //# sourceMappingURL=index.test.js.map
