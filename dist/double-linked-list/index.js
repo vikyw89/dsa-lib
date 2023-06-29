@@ -19,6 +19,7 @@ class DoubleLinkedList {
     constructor(data) {
         /**
          * Inserts a new node with the specified data at the end of the doubly linked list.
+         * TimeComplexity = O(1)
          * @param data - The data for the new node.
          */
         this.push = (data) => {
@@ -34,6 +35,7 @@ class DoubleLinkedList {
         };
         /**
          * Returns the data of the first node in the doubly linked list.
+         * TimeComplexity = O(1)
          * @returns The data of the first node.
          */
         this.first = () => {
@@ -42,6 +44,7 @@ class DoubleLinkedList {
         };
         /**
          * Converts the doubly linked list to an array.
+         * TimeComplexity = O(n)
          * @returns An array containing the data of all the nodes.
          */
         this.toArray = () => {
@@ -58,6 +61,7 @@ class DoubleLinkedList {
         };
         /**
          * Returns the data of the last node in the doubly linked list.
+         * TimeComplexity = O(1)
          * @returns The data of the last node.
          */
         this.last = () => {
@@ -66,6 +70,7 @@ class DoubleLinkedList {
         };
         /**
          * Inserts a new node with the specified data at the beginning of the doubly linked list.
+         * TimeComplexity = O(1)
          * @param data - The data for the new node.
          */
         this.unshift = (data) => {
@@ -81,6 +86,7 @@ class DoubleLinkedList {
         };
         /**
          * Removes and returns the data of the last node in the doubly linked list.
+         * TimeComplexity = O(1)
          * @returns The data of the last node.
          */
         this.pop = () => {
@@ -100,6 +106,7 @@ class DoubleLinkedList {
         };
         /**
          * Removes and returns the data of the first node in the doubly linked list.
+         * TimeComplexity = O(1)
          * @returns The data of the first node.
          */
         this.shift = () => {
@@ -119,6 +126,7 @@ class DoubleLinkedList {
         };
         /**
          * Initializes the doubly linked list with nodes created from the elements of the specified array.
+         * TimeComplexity = O(n)
          * @param data - An array containing the data for the nodes.
          */
         this.fromArray = (data) => {
@@ -139,11 +147,16 @@ class DoubleLinkedList {
         };
         /**
          * Clears the doubly linked list by setting the head and tail nodes to undefined.
+         * TimeComplexity = O(1)
          */
         this.clear = () => {
             this.head = undefined;
             this.tail = undefined;
         };
+        /**
+         * Get size of the linkedList.
+         * TimeComplexity = O(n)
+         */
         this.size = () => {
             let counter = 0;
             let pointer = this.head;

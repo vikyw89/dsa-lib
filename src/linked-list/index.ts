@@ -23,6 +23,7 @@ export class LinkedList {
 
     /**
      * Returns the data of the first node in the linked list.
+     * TimeComplexity = O(1)
      * @returns The data of the first node.
      */
     first = () => {
@@ -31,6 +32,7 @@ export class LinkedList {
 
     /**
      * Returns the data of the last node in the linked list.
+     * TimeComplexity = O(1)
      * @returns The data of the last node.
      */
     last = () => {
@@ -39,6 +41,7 @@ export class LinkedList {
 
     /**
      * Converts the linked list to an array.
+     * TimeComplexity = O(n)
      * @returns An array containing the data of all the nodes.
      */
     toArray = () => {
@@ -55,6 +58,7 @@ export class LinkedList {
 
     /**
      * Inserts a new node with the specified data at the end of the linked list.
+     * TimeComplexity = O(1)
      * @param data - The data for the new node.
      */
     push = (data: unknown) => {
@@ -70,6 +74,7 @@ export class LinkedList {
 
     /**
      * Inserts a new node with the specified data at the beginning of the linked list.
+     * TimeComplexity = O(1)
      * @param data - The data for the new node.
      */
     unshift = (data: unknown) => {
@@ -85,6 +90,7 @@ export class LinkedList {
 
     /**
      * Initializes the linked list with nodes created from the elements of the specified array.
+     * TimeComplexity = O(n)
      * @param data - An array containing the data for the nodes.
      */
     fromArray = (data: Array<unknown>) => {
@@ -104,6 +110,7 @@ export class LinkedList {
 
     /**
      * Removes and returns the data of the last node in the linked list.
+     * TimeComplexity = O(n)
      * @returns The data of the last node.
      */
     pop = () => {
@@ -126,6 +133,7 @@ export class LinkedList {
 
     /**
      * Removes and returns the data of the first node in the linked list.
+     * TimeComplexity = O(1)
      * @returns The data of the first node.
      */
     shift = () => {
@@ -136,11 +144,16 @@ export class LinkedList {
 
     /**
      * Clears the linked list by setting the head node to undefined.
+     * TimeComplexity = O(1)
      */
     clear = () => {
         this.head = undefined;
     };
 
+    /**
+     * Get size of the linkedList.
+     * TimeComplexity = O(n)
+     */
     size = () => {
         let counter = 0
         let pointer = this.head
