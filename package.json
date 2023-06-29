@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "type": "module",
   "scripts": {
-    "test": "jest --watch",
+    "test": "jest --watch ./src",
     "dev": "(git pull || echo no git) && npm i && tsc --watch & npx typedoc --watch"
   },
   "repository": {

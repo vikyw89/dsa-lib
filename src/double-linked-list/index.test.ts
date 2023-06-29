@@ -1,16 +1,16 @@
-import { LinkedList } from "./index.js";
+import { DoubleLinkedList } from "./index.js";
 
-describe('testing LinkedList file', () => {
+describe('testing DoubleLinkedList file', () => {
     let newList: any
     beforeEach(() => {
-        newList = new LinkedList()
+        newList = new DoubleLinkedList()
     })
 
-    test('new LinkedList()', () => {
-        expect(JSON.stringify(newList)).toBe(JSON.stringify(new LinkedList()));
+    test('new DoubleLinkedList()', () => {
+        expect(JSON.stringify(newList)).toBe(JSON.stringify(new DoubleLinkedList()));
     });
     
-    test('LinkedList.push()', () => {
+    test('DoubleLinkedList.push()', () => {
         newList.push(1)
         expect(newList.head.data).toBe(1)
         newList.push(2)
@@ -18,7 +18,7 @@ describe('testing LinkedList file', () => {
         expect(newList.head.data).toBe(1)
     })
 
-    test('LinkedList.first()', () => {
+    test('DoubleLinkedList.first()', () => {
         expect(newList.first()).toBe(undefined)
         newList.push(1)
         expect(newList.first()).toBe(1)
@@ -26,7 +26,7 @@ describe('testing LinkedList file', () => {
         expect(newList.head.next.data).toBe(undefined)
     })
 
-    test('LinkedList.toArray()', () => {
+    test('DoubleLinkedList.toArray()', () => {
         expect(JSON.stringify(newList.toArray())).toBe(JSON.stringify([]))
         newList.push(null)
         expect(JSON.stringify(newList.toArray())).toBe(JSON.stringify([null]))
@@ -34,7 +34,7 @@ describe('testing LinkedList file', () => {
         expect(JSON.stringify(newList.toArray())).toBe(JSON.stringify([null,1]))
     })
 
-    test('LinkedList.last()', () => {
+    test('DoubleLinkedList.last()', () => {
         expect(newList.last()).toBe(undefined)
         newList.push(3)
         expect(newList.last()).toBe(3)
@@ -44,7 +44,7 @@ describe('testing LinkedList file', () => {
         expect(newList.last()).toBe(undefined)
     })
 
-    test('LinkedList.unshift()', () => {
+    test('DoubleLinkedList.unshift()', () => {
         newList.unshift(0)
         expect(JSON.stringify(newList.first())).toBe(JSON.stringify(0))
         newList.unshift(1)
@@ -54,7 +54,7 @@ describe('testing LinkedList file', () => {
         expect(JSON.stringify(newList.toArray())).toBe(JSON.stringify([undefined,1,0]))
     })
 
-    test('LinkedList.pop()', () => {
+    test('DoubleLinkedList.pop()', () => {
         expect(newList.pop()).toBe(undefined)
         newList.push(0)
         expect(newList.pop()).toBe(0)
@@ -63,14 +63,14 @@ describe('testing LinkedList file', () => {
         expect(newList.pop()).toBe(2)
     })
 
-    test('LinkedList.shift()', () => {
+    test('DoubleLinkedList.shift()', () => {
         expect(newList.shift()).toBe(undefined)
         newList.push(1)
         newList.push(2)
         expect(newList.shift()).toBe(1)
     })
 
-    test('LinkedList.fromArray()',()=>{
+    test('DoubleLinkedList.fromArray()',()=>{
         newList.fromArray([])
         expect(JSON.stringify(newList.toArray())).toBe(JSON.stringify([]))
         newList.fromArray([1,2,3,4])
@@ -79,7 +79,7 @@ describe('testing LinkedList file', () => {
         expect(JSON.stringify(newList.toArray())).toBe(JSON.stringify([undefined, undefined]))
     })
 
-    test('LinkedList.clear()',()=>{
+    test('DoubleLinkedList.clear()',()=>{
         newList.fromArray([1,2,3,4,3,1,1,1,4])
         newList.clear()
         expect(JSON.stringify(newList.toArray())).toBe(JSON.stringify([]))

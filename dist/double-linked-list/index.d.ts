@@ -1,14 +1,14 @@
-export declare class LinkedList {
-    constructor();
+export declare class DoubleLinkedList {
     head: any;
     tail: any;
-    first: () => any;
-    last: () => any;
-    toArray: () => any;
+    constructor(data?: any);
     push: (data: any) => void;
+    first: () => any;
+    toArray: () => any[];
+    last: () => any;
     unshift: (data: any) => void;
-    fromArray: (data: any) => void;
     pop: () => any;
     shift: () => any;
+    fromArray: (data: Array<any>) => void;
     clear: () => void;
 }
