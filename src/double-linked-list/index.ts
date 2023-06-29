@@ -34,6 +34,7 @@ export class DoubleLinkedList {
 
     /**
      * Inserts a new node with the specified data at the end of the doubly linked list.
+     * TimeComplexity = O(1)
      * @param data - The data for the new node.
      */
     push = (data: unknown) => {
@@ -50,6 +51,7 @@ export class DoubleLinkedList {
 
     /**
      * Returns the data of the first node in the doubly linked list.
+     * TimeComplexity = O(1)
      * @returns The data of the first node.
      */
     first = () => {
@@ -58,6 +60,7 @@ export class DoubleLinkedList {
 
     /**
      * Converts the doubly linked list to an array.
+     * TimeComplexity = O(n)
      * @returns An array containing the data of all the nodes.
      */
     toArray = () => {
@@ -75,6 +78,7 @@ export class DoubleLinkedList {
 
     /**
      * Returns the data of the last node in the doubly linked list.
+     * TimeComplexity = O(1)
      * @returns The data of the last node.
      */
     last = () => {
@@ -83,6 +87,7 @@ export class DoubleLinkedList {
 
     /**
      * Inserts a new node with the specified data at the beginning of the doubly linked list.
+     * TimeComplexity = O(1)
      * @param data - The data for the new node.
      */
     unshift = (data: unknown) => {
@@ -99,6 +104,7 @@ export class DoubleLinkedList {
 
     /**
      * Removes and returns the data of the last node in the doubly linked list.
+     * TimeComplexity = O(1)
      * @returns The data of the last node.
      */
     pop = () => {
@@ -119,6 +125,7 @@ export class DoubleLinkedList {
 
     /**
      * Removes and returns the data of the first node in the doubly linked list.
+     * TimeComplexity = O(1)
      * @returns The data of the first node.
      */
     shift = (): any => {
@@ -140,6 +147,7 @@ export class DoubleLinkedList {
 
     /**
      * Initializes the doubly linked list with nodes created from the elements of the specified array.
+     * TimeComplexity = O(n)
      * @param data - An array containing the data for the nodes.
      */
     fromArray = (data: Array<unknown>) => {
@@ -162,12 +170,17 @@ export class DoubleLinkedList {
 
     /**
      * Clears the doubly linked list by setting the head and tail nodes to undefined.
+     * TimeComplexity = O(1)
      */
     clear = () => {
         this.head = undefined;
         this.tail = undefined;
     };
 
+    /**
+     * Get size of the linkedList.
+     * TimeComplexity = O(n)
+     */
     size = () => {
         let counter = 0
         let pointer = this.head
