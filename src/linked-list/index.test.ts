@@ -59,7 +59,9 @@ describe('testing LinkedList file', () => {
         newList.push(0)
         expect(newList.pop()).toBe(0)
         newList.push(1)
-        newList.push(2)
+        for (let i=0; i < 10000000; i++) {
+            newList.push(2)
+        }
         expect(newList.pop()).toBe(2)
     })
 
